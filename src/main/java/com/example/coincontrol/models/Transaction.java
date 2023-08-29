@@ -16,10 +16,13 @@ public class Transaction {
     private Double amount;
     private String description;
     @ManyToOne
-    private Account account;
+    private User user;
 
     @ManyToOne
     private Category category;
+
+    @ManyToOne
+    private BudgetPeriod budgetPeriod;
 
     public Long getId() {
         return id;
@@ -53,14 +56,6 @@ public class Transaction {
         this.description = description;
     }
 
-    public Account getAccount() {
-        return account;
-    }
-
-    public void setAccount(Account account) {
-        this.account = account;
-    }
-
     public Category getCategory() {
         return category;
     }
@@ -68,4 +63,22 @@ public class Transaction {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public BudgetPeriod getBudgetPeriod() {
+        return budgetPeriod;
+    }
+
+    public void setBudgetPeriod(BudgetPeriod budgetPeriod) {
+        this.budgetPeriod = budgetPeriod;
+    }
+
+
 }

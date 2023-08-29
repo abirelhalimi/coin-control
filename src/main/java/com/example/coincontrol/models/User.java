@@ -3,11 +3,11 @@ package com.example.coincontrol.models;
 import jakarta.persistence.*;
 
 @Entity(name = "account")
-@SequenceGenerator(name = "ACCOUNT_SQ", sequenceName = "account_sequence")
-public class Account {
+@SequenceGenerator(name = "USER_SQ", sequenceName = "user_sequence")
+public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "ACCOUNT_SQ")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "USER_SQ")
     private Long id;
 
     private String username;

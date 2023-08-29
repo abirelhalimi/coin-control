@@ -10,13 +10,15 @@ public class Budget {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "BUDGET_SQ")
     private Long id;
 
-    private Double amount;
+    private Double budgetAmount;
+
+    private Double actualAmount;
 
     @ManyToOne
     private Category category;
 
     @ManyToOne
-    private Account account;
+    private User user;
 
     public Long getId() {
         return id;
@@ -24,14 +26,6 @@ public class Budget {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
     }
 
     public Category getCategory() {
@@ -42,11 +36,27 @@ public class Budget {
         this.category = category;
     }
 
-    public Account getAccount() {
-        return account;
+    public Double getBudgetAmount() {
+        return budgetAmount;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setBudgetAmount(Double budgetAmount) {
+        this.budgetAmount = budgetAmount;
+    }
+
+    public Double getActualAmount() {
+        return actualAmount;
+    }
+
+    public void setActualAmount(Double actualAmount) {
+        this.actualAmount = actualAmount;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
