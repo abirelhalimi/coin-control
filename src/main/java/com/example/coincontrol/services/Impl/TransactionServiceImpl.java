@@ -24,19 +24,19 @@ public class TransactionServiceImpl implements TransactionService {
     public Transaction update(Long id, Transaction newTransactionData) {
 
         Transaction existingTransaction = getById(id);
-        if (newTransactionData.getBudgetPeriod() != null)  {
+        if (newTransactionData.getBudgetPeriod() != null) {
             existingTransaction.setBudgetPeriod(newTransactionData.getBudgetPeriod());
         }
-        if (newTransactionData.getAmount() != null)  {
+        if (newTransactionData.getAmount() != null) {
             existingTransaction.setAmount(newTransactionData.getAmount());
         }
-        if (newTransactionData.getDate() != null)  {
+        if (newTransactionData.getDate() != null) {
             existingTransaction.setDate(newTransactionData.getDate());
         }
-        if (newTransactionData.getCategory() != null)  {
+        if (newTransactionData.getCategory() != null) {
             existingTransaction.setCategory(newTransactionData.getCategory());
         }
-        if (newTransactionData.getDescription() != null)  {
+        if (newTransactionData.getDescription() != null) {
             existingTransaction.setDescription(newTransactionData.getDescription());
         }
         return transactionRepository.save(existingTransaction);

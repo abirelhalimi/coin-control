@@ -1,7 +1,6 @@
 package com.example.coincontrol.services;
 
 import com.example.coincontrol.models.BudgetPeriod;
-import com.example.coincontrol.models.Transaction;
 import com.example.coincontrol.repositories.BudgetPeriodRepository;
 import com.example.coincontrol.services.Impl.BudgetPeriodServiceImpl;
 import jakarta.persistence.EntityNotFoundException;

@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
     @Override
     public User add(User user) {
         return userRepository.save(user);
@@ -23,15 +24,15 @@ public class UserServiceImpl implements UserService {
     public User update(Long id, User newUserData) {
         User existingUser = getById(id);
 
-        if(newUserData.getUsername() != null) {
+        if (newUserData.getUsername() != null) {
             existingUser.setUsername(newUserData.getUsername());
         }
 
-        if(newUserData.getEmail() != null) {
+        if (newUserData.getEmail() != null) {
             existingUser.setEmail(newUserData.getEmail());
         }
 
-        if(newUserData.getPassword() != null) {
+        if (newUserData.getPassword() != null) {
             existingUser.setPassword(newUserData.getPassword());
         }
 
